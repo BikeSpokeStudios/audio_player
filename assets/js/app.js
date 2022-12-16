@@ -46,6 +46,8 @@ Hooks.AudioPlayer = {
             }
         })
 
+        
+
         this.handleEvent("play", () => {
             this.play({sync: true});
         })

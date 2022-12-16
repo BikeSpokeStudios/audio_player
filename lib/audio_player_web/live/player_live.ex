@@ -33,6 +33,7 @@ defmodule AudioPlayerWeb.PlayerLive do
 
   def handle_event("up", _, socket) do
     volume = Enum.min([socket.assigns.volume + 0.1, 1.0])
+    js_adjust_volume(volume)
     socket = assign(socket, volume: volume, saved: volume)
     {:noreply, socket}
   end
@@ -56,6 +57,10 @@ defmodule AudioPlayerWeb.PlayerLive do
   defp js_play_pause() do
     JS.push("play_pause")
     |> JS.dispatch("js:play_pause", to: "#audio-player")
+  end
+
+  defp js_adjust_volume(volume) do
+
   end
 
   def render(assigns) do
