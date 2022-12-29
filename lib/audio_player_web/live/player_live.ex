@@ -182,6 +182,7 @@ defmodule AudioPlayerWeb.PlayerLive do
             </svg>
         </label>
         <input
+          class="win10-thumb"
           type="range"
           name="volume"
           id="volume"

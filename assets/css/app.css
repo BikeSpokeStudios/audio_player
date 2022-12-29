@@ -161,7 +161,7 @@ input[type="range"]:active::-ms-thumb {
 
 input[type="range"] {
   width: 100%;
-  margin: 11px 2.5% 15px 2.5%; 
+  margin: 11px 0 15px 2.5%; 
 	color: #ef233c;
 	--thumb-height: 1.125em;
 	--track-height: 0.125em;
